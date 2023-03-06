@@ -56,8 +56,8 @@ def update_gist_file(
         "edit",
         gist_id,
         "-f",
-        file,  # Local file
         file.name,  # File name in the old gist
+        file,  # Local file
     ]
     logger.info("Running %s", args)
     proc = subprocess.run(
